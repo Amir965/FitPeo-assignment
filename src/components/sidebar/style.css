@@ -689,6 +689,9 @@ a {
 }
 
 @media screen and (max-width: 575px) {
+    .sidebar{
+        transition: all 0s ease;
+    }
     .home-section {
         margin-top: 30px;
     }

@@ -1,8 +1,10 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useEffect } from "react";
+import React, {useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
 const SideBar = ({ activeMenuItem }) => {
+  
+
   useEffect(() => {
     const arrows = document.querySelectorAll(".arrow");
     arrows.forEach((arrow) => {
@@ -32,14 +34,20 @@ const SideBar = ({ activeMenuItem }) => {
         <div class="header-left-content" style={{ height: "25px" }}></div>
       </div>
       <div className="sidebar close">
+      
         <div className="logo-details">
           <img
             src={require("../../assets/icons/header-logo.png")}
             alt="logo"
             className="logo_name"
           />
+          
 
-          <i className="bx bx-menu" id="btn" />
+          <i className="bx bx-menu " id="btn"/>
+          
+
+          
+
         </div>
         <ul className="nav-links">
           <Link
