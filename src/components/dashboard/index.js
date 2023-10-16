@@ -2,10 +2,9 @@ import React from "react";
 import SideBar from "../sidebar/SideBar";
 import { cardData } from "../../data/Data";
 import DashBoardCard from "./DashBoardCard";
-// import DonutChart from "./DonutChart";
-// import GraphComponents from "./GraphComponents";
+import DonutChart from "./DonutChart";
+import GraphComponents from "./GraphComponents";
 import ProductSell from "./ProductSell";
-import ColumnChart from "./Chart";
 const DashBoard = () => {
   const data = cardData;
   return (
@@ -27,8 +26,7 @@ const DashBoard = () => {
             ))}
           </div>
           <div className="mt-4  mb-4 graph d-flex justify-content-between graph-div">
-            {/* <GraphComponents /> */}
-            <ColumnChart/>
+            <GraphComponents />
             <div className="donut-graph">
               <div
                 className="bar-graph-overview d-flex flex-column"
@@ -40,7 +38,7 @@ const DashBoard = () => {
                 </span>
               </div>
 
-              {/* <DonutChart /> */}
+              <DonutChart />
             </div>
           </div>
           <div className="product-sell-container mt-4 mb-4">
