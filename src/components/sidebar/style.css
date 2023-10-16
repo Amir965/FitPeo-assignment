@@ -220,7 +220,7 @@ body {
     justify-content: center;
     background: #2d2d69;
     padding: 0px 0;
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
     margin-left: 15px;
     border-radius: 5px;
 }
@@ -249,7 +249,7 @@ body {
     border-radius: 16px;
     margin: 0 14px 0 12px;
     background: #1d1b31;
-    transition: all 0.5s ease;
+    /* transition: all 0.5s ease; */
 }
 
 .sidebar.close .profile-details img {
@@ -364,6 +364,9 @@ a {
     .sidebar.close .header-logo {
         opacity: 0;
     }
+        .sidebar .profile-details{
+            transition: all 0.0s ease;
+        }
 }
 
 /* -------------------->dashboard css start here<------------------------- */
