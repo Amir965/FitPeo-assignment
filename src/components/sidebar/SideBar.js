@@ -1,39 +1,25 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, {useEffect } from "react";
+import React, {useState,useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
 const SideBar = ({ activeMenuItem }) => {
-  
+  const [showMenu, setShowMenu] = useState(false);
 
-  useEffect(() => {
-    const arrows = document.querySelectorAll(".arrow");
-    arrows.forEach((arrow) => {
-      arrow.addEventListener("click", (e) => {
-        const arrowParent = e.target.parentElement.parentElement;
-        arrowParent.classList.toggle("showMenu");
-      });
-    });
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
+  };
 
-    const sidebarBtn = document.querySelector(".bx-menu");
-    const sidebar = document.querySelector(".sidebar");
+  // const handleArrowClick = () => {
+  //   setShowMenu(!showMenu);
+  // }
 
-    sidebarBtn.addEventListener("click", () => {
-      sidebar.classList.toggle("close");
-    });
-
-    return () => {
-      arrows.forEach((arrow) => {
-        arrow.removeEventListener("click", () => {});
-      });
-      sidebarBtn.removeEventListener("click", () => {});
-    };
-  }, []);
+ 
   return (
     <>
       <div class="header-left-container">
         <div class="header-left-content" style={{ height: "25px" }}></div>
       </div>
-      <div className="sidebar close">
+      <div className={`sidebar ${showMenu ? 'close' : ''}`}>
       
         <div className="logo-details">
           <img
@@ -43,8 +29,10 @@ const SideBar = ({ activeMenuItem }) => {
           />
           
 
-          <i className="bx bx-menu " id="btn"/>
           
+          {/* <i className="bx bx-menu arrow" onClick={handleArrowClick} /> */}
+
+      <i className={`bx bx-menu ${showMenu ? 'hamber' : 'bx-x'}`} id="btn" onClick={toggleMenu} />
 
           
 
