@@ -328,8 +328,12 @@ a {
 
 /* for mobile */
 @media screen and (max-width: 575px) {
+    .sidebar{
+    transition: all 0.3s ease;
+    }
     .sidebar.close {
         width: 0px;
+        transition: all 0.3s ease;
     }
 
     .sidebar.close~.home-section {
@@ -365,7 +369,7 @@ a {
         opacity: 0;
     }
         .sidebar .profile-details{
-            transition: all 0.0s ease;
+            transition: all 0.3s ease;
         }
 }
 
