@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
 const SideBar = ({ activeMenuItem }) => {
@@ -9,33 +9,24 @@ const SideBar = ({ activeMenuItem }) => {
     setShowMenu(!showMenu);
   };
 
-  // const handleArrowClick = () => {
-  //   setShowMenu(!showMenu);
-  // }
-
- 
   return (
     <>
       <div class="header-left-container">
         <div class="header-left-content" style={{ height: "25px" }}></div>
       </div>
-      <div className={`sidebar ${showMenu ? 'close' : ''}`}>
-      
+      <div className={`sidebar ${showMenu ? "open" : "close"}`}>
         <div className="logo-details">
           <img
             src={require("../../assets/icons/header-logo.png")}
             alt="logo"
             className="logo_name"
           />
-          
 
-          
-          {/* <i className="bx bx-menu arrow" onClick={handleArrowClick} /> */}
-
-      <i className={`bx bx-menu ${showMenu ? 'hamber' : 'bx-x'}`} id="btn" onClick={toggleMenu} />
-
-          
-
+          <i
+            className={`bx bx-menu ${showMenu ? "bx-x" : "hamber"}`}
+            id="btn"
+            onClick={toggleMenu}
+          />
         </div>
         <ul className="nav-links">
           <Link
@@ -115,12 +106,9 @@ const SideBar = ({ activeMenuItem }) => {
                     Customers
                   </a>
                 </li>
-                <li>
-                </li>
-                <li>
-                </li>
-                <li>
-                </li>
+                <li></li>
+                <li></li>
+                <li></li>
               </ul>
             </li>
           </Link>
@@ -141,12 +129,9 @@ const SideBar = ({ activeMenuItem }) => {
                 <li>
                   <a className="link_name">Income</a>
                 </li>
-                <li>
-                </li>
-                <li>
-                </li>
-                <li>
-                </li>
+                <li></li>
+                <li></li>
+                <li></li>
               </ul>
             </li>
           </Link>

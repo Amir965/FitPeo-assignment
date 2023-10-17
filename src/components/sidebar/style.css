@@ -329,11 +329,12 @@ a {
 /* for mobile */
 @media screen and (max-width: 575px) {
     .sidebar{
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease;
     }
     .sidebar.close {
         width: 0px;
         transition: all 0.3s ease;
+        
     }
 
     .sidebar.close~.home-section {
